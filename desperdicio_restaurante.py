@@ -25,7 +25,8 @@ class Registro(BaseModel):
     desperdicios = ManyToManyField(Desperdicio)
     pessoas = IntegerField()
     def __str__(self):
-        s = "Em: "+str(self.data) + " havia "+str(self.pessoas)+" pessoas: "
+        s = "Em: "+str(self.data) + " h
+        avia "+str(self.pessoas)+" pessoas: "
         for d in self.desperdicios:
             s += str(d)
         return s            
