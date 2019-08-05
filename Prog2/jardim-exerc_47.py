@@ -15,14 +15,14 @@ class Planta(BaseModel):
     nome_cientifico = CharField()
     tamanho = CharField()
 
+class Jardineiro(BaseModel):
+    nome_jardineiro = CharField()
+    cpf_jardineiro = FloatField()
+    
 class Jardim(BaseModel):
     nome_jardineiro = ForeignKeyField(Jardineiro)
     nome_planta = ForeignKeyField(Planta)
     numero_jardim = FloatField()
-
-class Jardineiro(BaseModel):
-    nome_jardineiro = CharField()
-    cpf_jardineiro = FloatField()
 
 if __name__ == "__main__":
 
